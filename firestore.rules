@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Seules ces adresses peuvent lire et écrire les données de Chez Manou.
+    // Ajoutez une ligne par membre de l'équipe (en minuscules), puis redéployez.
+    function membre() {
+      return request.auth != null && request.auth.token.email in [
+        'manou@exemple.com',
+        'caisse.bar@exemple.com',
+        'caisse.depot@exemple.com'
+      ];
+    }
+    match /{document=**} {
+      allow read, write: if membre();
+    }
+  }
+}

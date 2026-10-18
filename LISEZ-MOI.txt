@@ -1,0 +1,15 @@
+CHEZ MANOU - LES DEUX PROJETS POUR GITHUB
+==========================================
+
+chez-manou-caisse/   Application de caisse et de gestion. DÉPÔT PRIVÉ.
+                     Code : public/index.html, public/app.js, public/firebase-config.js
+                     Sécurité : firestore.rules, firebase.json
+                     Guide d'installation : GUIDE.md
+                     Présentation et captures : docs/
+
+chez-manou-vitrine/  Site public pour les clients.
+                     Infos à modifier (menu, prix, horaires, WhatsApp, photos) : public/config.js
+                     Guide : GUIDE.md
+
+Envoi sur GitHub : voir envoyer-sur-github.sh
+Ne mettez jamais de mot de passe ni de jeton dans ces fichiers.
